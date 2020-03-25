@@ -1,0 +1,15 @@
+doctype html
+html[lang="vi"]
+  head
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_pack_tag 'application'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+
+  body[theme='buymed']
+    p.notice
+      = notice
+    p.alert
+      = alert
+    = render 'layouts/navigation'
+    = yield
