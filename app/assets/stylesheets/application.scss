@@ -12,5 +12,11 @@
  *
  */
 
- @import "bootstrap-sprockets";
+@import "bootstrap-sprockets";
 @import "bootstrap";
+@import './desktop.scss';
+@import './mobile.scss';
+@import './homepage.scss';
+@import './posts.scss';
+
+
