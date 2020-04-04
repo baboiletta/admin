@@ -13,7 +13,7 @@ end
 
 
 def seed_categories
-  describes = ['tin moi', 'tin khuyen mai', 'tin tong hop', 'thng tin phap li', 'ho tro']
+  describes = ['tin moi', 'tin khuyen mai', 'tin tong hop', 'thong tin phap li', 'ho tro']
   describes.each do |name|
     Category.create(slug: name, name: name)
   end

@@ -48,6 +48,11 @@ group :development do
   #
   gem 'devise'
   gem 'faker'
+  gem 'hirb'
+  gem "administrate"
+  gem 'trix'
+  gem 'gravatar_image_tag'
+  gem 'mini_magick'
 
 end
 

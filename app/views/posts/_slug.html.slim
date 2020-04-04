@@ -1,0 +1,13 @@
+#slug-main-content.container
+  .row
+    h1.page-title
+      = page_title
+    .col-sm-12
+      .col-sm-8.col-sm-offset-2
+        = render create_new_post_partial_path, branch: branch
+  .row
+    = render 'posts/categories', branch: branch
+  .row
+    #feed.col-sm-12
+      = render @posts
+      = render no_posts_partial_path

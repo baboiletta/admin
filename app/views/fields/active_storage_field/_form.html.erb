@@ -1,0 +1,8 @@
+<div class="field-unit__label">
+  <%= f.label field.attribute %>
+</div>
+<div class="field-unit__field">
+  <% if field.data.present? && field.attached? %>
+    <%= f.file_field field.attribute, multiple: field.many?, direct_upload: field.direct? %>
+  <% end %>
+</div>

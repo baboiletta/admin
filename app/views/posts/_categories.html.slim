@@ -1,0 +1,7 @@
+- slug_path_name = "#{params[:action]}_posts_path"
+.col-sm-12
+  ul.categories-list
+    = render all_categories_button_partial_path,slug_path_name: slug_path_name
+    - @categories.each do |category|
+      li.category-item
+        = link_to category.name,send(slug_path_name, category: category.name),:class => ("selected-item" if params[:category] == category.name)

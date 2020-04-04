@@ -23,3 +23,39 @@
 .post-content {
   display: none;
 }
+
+.solid-color-mode, .border-color-mode {
+  .post-text {
+    text-align: center;
+  }
+}
+
+.solid-color-mode {
+  .post-text {
+    padding: 10px;
+    background-color: white;
+    border-radius: 25px;
+  }
+}
+
+.border-color-mode {
+  background-color: white;
+}
+
+#single-post-content {
+  background: white;
+  height: calc(100vh - 50px);
+
+  h3 {
+    text-align: center;
+  }
+  p {
+    margin: 50px 0;
+  }
+  .posted-by {
+    font-size: 12px;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: rgba(0,0,0,0.5);
+  }
+}

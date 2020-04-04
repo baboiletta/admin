@@ -6,6 +6,7 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit( :name,
                                   :email,
                                   :password,
+                                  :avatar,
                                   :password_confirmation)
   end
 
@@ -14,6 +15,9 @@ class RegistrationsController < Devise::RegistrationsController
                                   :email,
                                   :password,
                                   :password_confirmation,
+                                  :avatar,
                                   :current_password)
+
+
   end
 end
