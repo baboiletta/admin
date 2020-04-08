@@ -9,12 +9,11 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
           span.sr-only
             | (current)
       li.nav-item
-        a.nav-link[href="#"]
-          | Link
+        = link_to 'Admin', admin_users_path, class: 'nav-link'
       - if user_signed_in?
         li.nav-item.dropdown
           a#navbarDropdown.nav-link.dropdown-toggle[href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
-            = image_tag user_avatar(current_user,40), class: 'rounded-circle'
+            = image_tag user_avatar(current_user, 40), class: 'rounded-circle'
             .dropdown-menu[aria-labelledby="navbarDropdown"]
               a.nav-link[href=edit_user_registration_path]
                 | Edit Profile

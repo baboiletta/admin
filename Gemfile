@@ -53,6 +53,11 @@ group :development do
   gem 'trix'
   gem 'gravatar_image_tag'
   gem 'mini_magick'
+  gem 'rolify'
+  gem 'administrate-field-active_storage', '~> 0.2.2'
+  gem 'image_processing', '~> 1.2'
+
+
 
 end
 

@@ -4,3 +4,8 @@
 //= require moment
 //= require datetime_picker
 //= require trix
+//= require activestorage
+//= require trix_attachments
+
+
+

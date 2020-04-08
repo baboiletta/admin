@@ -17,6 +17,10 @@ require("channels")
 //= require jquery
 //= require bootstrap
 //= require trix
+//= require activestorage
+import '../../assets/javascripts/trix_attachments'
+
+
 import '../stylesheets/application'
 import 'bootstrap'
 import 'posts/style'

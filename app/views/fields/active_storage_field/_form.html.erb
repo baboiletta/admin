@@ -1,8 +1,13 @@
 <div class="field-unit__label">
   <%= f.label field.attribute %>
 </div>
+
 <div class="field-unit__field">
   <% if field.data.present? && field.attached? %>
-    <%= f.file_field field.attribute, multiple: field.many?, direct_upload: field.direct? %>
+    <%= render partial: 'fields/active_storage/items', locals: { field: field, removable: field.destroyable? } %>
+    <br />
+    Add:
   <% end %>
+
+  <%= f.file_field field.attribute, multiple: field.many?, direct_upload: field.direct? %>
 </div>

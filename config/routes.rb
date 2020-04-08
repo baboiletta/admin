@@ -3,6 +3,7 @@ Rails.application.routes.draw do
       resources :users
       resources :posts
       resources :categories
+      resources :roles, only: [:index, :show]
 
       root to: "users#index"
     end
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
   end
 
   resources :pages
+  delete "custom_active_record_remove", to: 'users#remove_avatar'
+
   root to: 'pages#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :categories

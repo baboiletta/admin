@@ -1,1 +1,16 @@
-<%= image_tag field.gravatar_url, class:'rounded-circle' %>
+<!-- <style>
+  td img {
+      max-height: unset !important;
+  }
+</style>
+<%
+  attachments = Array(field.many? ? field.attachments : field.data)
+%>
+<% if field.attached? %>
+  <% if field.show_in_index? %>
+    <%= render partial: 'fields/active_storage/item', locals: { field: field, attachment: attachments[0], image_size: [250, 250] } %>
+  <% end %>
+  <%= pluralize(attachments.count, 'Attached file') %>
+<% else %>
+0 Attached files
+<% end %> -->
