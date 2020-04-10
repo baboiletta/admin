@@ -2,7 +2,10 @@
   <%= f.label field.attribute_key, field.attribute %>
 </div>
 <div class="field-unit__field">
-  <%= f.select(field.attribute_key, nil, {}, multiple: true) do %>
+  <!-- <%= f.select(field.attribute_key, nil, {}, multiple: true) do %>
   <%= options_for_select(field.associated_resource_options, field.selected_options) %>
-  <% end %>
+  <% end %> -->
+  <%= field.choices.each do |category| %>
+    <%= check_box_tag 'customer[category_id][]', category.id %>
+    <%= category.name %>
 </div>

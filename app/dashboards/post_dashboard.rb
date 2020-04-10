@@ -9,7 +9,7 @@ class PostDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     user: Field::BelongsTo,
-    category: Field::BelongsTo,
+    categories: Field::HasMany,
     id: Field::Number,
     title: Field::String,
     content: TrixField,
@@ -26,16 +26,15 @@ class PostDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
   user
-  category
+  categories
   id
-  title
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
   user
-  category
+  categories
   id
   title
   content
@@ -50,7 +49,7 @@ class PostDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
   user
-  category
+  categories
   title
   content
   slug
@@ -72,7 +71,7 @@ class PostDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how posts are displayed
   # across all pages of the admin dashboard.
   #
-  def display_resource(post)
-    post.title
-  end
+  # def display_resource(post)
+  #   "Post ##{post.id}"
+  # end
 end

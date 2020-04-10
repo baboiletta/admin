@@ -28,7 +28,6 @@ def seed_posts
         title: Faker::Lorem.sentences[0],
         content: Faker::Lorem.sentences[0],
         user_id: rand(1..9),
-        category_id: category.id
       )
     end
   end

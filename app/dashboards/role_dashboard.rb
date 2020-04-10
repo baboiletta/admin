@@ -22,9 +22,9 @@ class RoleDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
-  id
   users
   resource
+  id
   name
   ].freeze
 
@@ -63,7 +63,7 @@ class RoleDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how roles are displayed
   # across all pages of the admin dashboard.
   #
-  def display_resource(role)
-    role.name
-  end
+  # def display_resource(role)
+  #   "Role ##{role.id}"
+  # end
 end

@@ -5,7 +5,6 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.text :content
       t.string :slug
       t.string :author
-      t.belongs_to :category, index: true
       t.belongs_to :user, index: true
       t.timestamps
     end
