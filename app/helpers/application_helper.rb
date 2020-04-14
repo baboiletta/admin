@@ -7,7 +7,7 @@ module ApplicationHelper
     if user.avatars.attached?
       variant(user.avatars.first,resize: "#{size}x#{size}!" )
     else
-       gravatar_image_url(user.email, size: size)
+      gravatar_image_url(user.email, size: size)
     end
   end
 
