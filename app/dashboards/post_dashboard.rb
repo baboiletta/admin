@@ -41,7 +41,6 @@ class PostDashboard < Administrate::BaseDashboard
   title
   content
   slug
-  author
   created_at
   updated_at
   ].freeze
@@ -55,7 +54,6 @@ class PostDashboard < Administrate::BaseDashboard
   title
   content
   slug
-  author
   ].freeze
 
   # COLLECTION_FILTERS

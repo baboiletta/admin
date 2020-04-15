@@ -42,7 +42,6 @@ class UserDashboard < Administrate::BaseDashboard
   id
   email
   name
-  remember_created_at
   created_at
   updated_at
   avatars  ].freeze
@@ -55,7 +54,6 @@ class UserDashboard < Administrate::BaseDashboard
   posts
   email
   name
-  remember_created_at
   avatars  ].freeze
 
   # COLLECTION_FILTERS
