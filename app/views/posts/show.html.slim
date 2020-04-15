@@ -7,4 +7,4 @@
       h3
         = @post.title
       p
-        = @post.content
+        = sanitize @post.content
