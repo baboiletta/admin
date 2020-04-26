@@ -56,6 +56,7 @@ group :development do
   gem 'rolify'
   gem 'administrate-field-active_storage', '~> 0.2.2'
   gem 'image_processing', '~> 1.2'
+  gem 'rails-i18n'
 
 
 

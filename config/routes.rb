@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
-  namespace :admin do
-      resources :users
-      resources :posts
-      resources :categories
-      resources :roles, only: [:index, :show]
+  scope "(:locale)", locale: /en|vi/ do
 
-      root to: "users#index"
+    namespace :admin do
+        resources :users
+        resources :posts
+        resources :categories
+        resources :roles, only: [:index, :show]
+
+        root to: "users#index"
     end
+  end
   devise_for :users, :controllers => {:registrations => "registrations"}
   devise_scope :user do
     get 'signup', to: 'devise/registrations#new'
